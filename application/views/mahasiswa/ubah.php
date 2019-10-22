@@ -18,16 +18,19 @@
    
         <form action="" method="post">
          <div class="form-group">
+            <input type="hidden" name="id" value="<?= $mahasiswa['id']; ?>">
+         </div>
+         <div class="form-group">
             <label for="nama">Nama</label>
-            <input type="text" name="nama" class="form-control" id="nama">
+            <input type="text" name="nama" class="form-control" id="nama" value="<?= $mahasiswa['nama']; ?>">
          </div>
          <div class="form-group">
             <label for="nrp">NRP</label>
-            <input type="text" name="nrp" class="form-control" id="nrp">
+            <input type="text" name="nrp" class="form-control" id="nrp" value="<?= $mahasiswa['nrp']; ?>">
          </div>
          <div class="form-group">
             <label for="email">Email</label>
-            <input type="Email" name="email" class="form-control" id="email">
+            <input type="Email" name="email" class="form-control" id="email" value="<?= $mahasiswa['email']; ?>">
          </div>
          <div class="form-group">
             <label for="jurusan">Jurusan</label>

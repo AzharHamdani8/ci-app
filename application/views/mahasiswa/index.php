@@ -18,22 +18,24 @@
 
 <div class="row mt-3">
     <div class="col-md-6">
-
     <a href="<?= base_url(); ?>mahasiswa/tambah" class="btn btn-primary">Tambah Data Mahasiswa</a>
     </div>
 </div>
 <br>
- <div class="row-mt-3">
-    <div class="col-md-6">
+
+    <div class="row" mt-3>
+        <div class="col-md-6">
         <form action="" method="post">
-        <input type="text" class="form-control" placeholder="Cari data mahasiswa..." neme="keyword">
-        
-        <div class="input-group-append">
-            <button class="btn btn-primary" type="submit">Cari</button>
-        </div>
+            <div class="input-group">
+             <input type="text" class="form-control" placeholder="Cari Data Mahasiswa.. " name="keyword">
+             <div class="input-group-append">
+                <button class="btn btn-primary" type="sumbit">Cari</button>
+             </div>
+            </div>
         </form>
+        </div>
+    
     </div>
- </div>
 
 
 
@@ -46,7 +48,8 @@
         data mahasiswa tidak ditemukan.
         </div>
     <?php endif; ?>
-    <ul class="list-group-item">
+
+    <ul class="list-group">
         <?php foreach( $mahasiswa as $mhs) : ?>
         <li class="list-group-item">
             <?= $mhs['nama'] ?>
