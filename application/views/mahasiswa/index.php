@@ -29,7 +29,7 @@
             <div class="input-group">
              <input type="text" class="form-control" placeholder="Cari Data Mahasiswa.. " name="keyword">
              <div class="input-group-append">
-                <button class="btn btn-primary" type="sumbit">Cari</button>
+                <button class="btn btn-primary" type="submit">Cari</button>
              </div>
             </div>
         </form>

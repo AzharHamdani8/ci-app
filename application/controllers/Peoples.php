@@ -10,9 +10,9 @@ class Peoples extends CI_Controller
 
         //load Library
 
-        $this->load->library{'pagination'};
+        $this->load->library('pagination');
 
-        if ($this->input->post('sumbit')) {
+        if ($this->input->post('submit')) {
             $data['keyword'] = $this->input->post('keyword');
             $this->session->set_userdata('keyword', $data['keyword']);
         }else{
@@ -21,12 +21,16 @@ class Peoples extends CI_Controller
 
         //cnfig
 
+    
+
+
         $this->db->like('name', $data['keyword']);
         $this->db->or_like('email', $data['keyword']);
         $this->db->from('peoples');
         $config['total_rows'] = $this->db->count_all_results();
         $data['total_rows'] = $config['total_rows'];
-        $config['per_page'] = 8;
+        $config['per_page'] = 12;
+
 
 
         //initialize 
@@ -42,4 +46,3 @@ class Peoples extends CI_Controller
 
         }
     }
-}
